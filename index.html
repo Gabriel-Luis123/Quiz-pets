@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/patas.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Indie+Flower&family=Inika:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Quiz Pets</title>
+</head>
+<body>
+    <main>
+        <header class="cabecalho">
+            <section class="cabecalho__logo">
+                <img src="assets/favicon-quiz-pets.png" alt="Icone do site Quiz sobre Pets" class="cabecalho__navegacao__logo">
+                <h1 class="cabecalho__navegacao__titulo">Quiz sobre pets</h1>
+            </section>
+            <nav class="cabecalho__navegacao">
+                <div class="cabecalho__navegacao__pesquisar">
+                    <input type="text" name="Pesquisa" id="Pesquisar" placeholder="Pesquisar" class="cabecalho__navegacao__pesquisar__pesquisa">
+                </div>
+        
+                <ul class="cabecalho__navegacao__categorias">
+                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">cachorros</a></li>
+                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">gatos</a></li>
+                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">ratos</a></li>
+                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">variados</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="curiosidades">
+            <div class="curiosidades__cachorro">
+                <a class="curiosidades__cachorro__titulo" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank">
+                    <h2>saiba mais</h2>
+                </a>
+                <a class="curiosidades__cachorro__foto" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank"><img src=".aassets/imagem-golden.webp" alt="Um cachorro da raça golden correndo"></a>
+            </div>
+            <div class="curiosidades__gato">
+                <a class="curiosidades__gato__titulo" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank">
+                    <h2>saiba mais</h2>
+                </a>
+                <a class="curiosidades__gato__foto" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank"><img src=".aassets/imagem-gato-laranja.jpg" alt="Um gato laranja tendo carinho de uma mão"></a>
+            </div>
+            <div class="curiosidades__rato">
+                <a class="curiosidades__rato__titulo" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank">
+                    <h2>saiba mais</h2>
+                </a>
+                <a class="curiosidades__rato__imagem" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank"><img src=".aassets/imagem-hamster.jfif" alt="Um hamster em cima de uma grade"></a>
+            </div>
+        </section>
+        <section class="quiz">
+            <div class="quiz__perguntas">
+                <h2 class="quiz__perguntas__quantidade">1</h2>
+                <h2 class="quiz__perguntas__perguntando">Qual é o país de origem da raça de cães corgi?</h2>
+                <ul class="quiz__perguntas__alternativa">
+                    <li class="quiz__perguntas__alternativa__opcao">
+                        <label for="Gales">
+                            <input type="radio" name="pais" id="Gales" class="quiz__perguntas__alternativa__opcao__selecionar">País de Gales
+                        </label>
+                    </li>
+                    <li class="quiz__perguntas__alternativa__opcao">
+                        <label for="Dinamarca">
+                            <input type="radio" name="pais" id="Dinamarca" class="quiz__perguntas__alternativa__opcao__selecionar">Dinamarca
+                        </label>
+                    </li>
+                    <li class="quiz__perguntas__alternativa__opcao">
+                        <label for="Noruega">
+                            <input type="radio" name="pais" id="Noruega" class="quiz__perguntas__alternativa__opcao__selecionar">Noruega
+                        </label>
+                    </li>
+                    <li class="quiz__perguntas__alternativa__opcao">
+                        <label for="Eua">
+                            <input type="radio" name="pais" id="Eua" class="quiz__perguntas__alternativa__opcao__selecionar">Estados Unidos
+                        </label>
+                    </li>
+                    <li class="quiz__perguntas__alternativa__opcao">
+                        <label for="Inglaterra">
+                            <input type="radio" name="pais" id="Inglaterra" class="quiz__perguntas__alternativa__opcao__selecionar">Inglaterra
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <img src=".aassets/imagem-corgi.webp" alt="Imagem de um cachorro da raça corgi" class="quiz__imagem">
+        </section>
+    </main>
+</body>
+</html>

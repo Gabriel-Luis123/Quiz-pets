@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "menu menu" "quiz curiosidades";
+}
+main .cabecalho {
+  grid-area: menu;
+}
+main .curiosidades {
+  grid-area: curiosidades;
+}
+main .quiz {
+  grid-area: quiz;
+}
+
+.cabecalho {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cabecalho .cabecalho__logo {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  align-items: center;
+}
+.cabecalho .cabecalho__logo .cabecalho__navegacao__logo {
+  padding: 1rem 0 1.5rem 2rem;
+  width: 8rem;
+}
+.cabecalho .cabecalho__logo .cabecalho__navegacao__titulo {
+  font-family: "Inika", serif;
+  font-size: 2.25rem;
+  color: none;
+  font-weight: 400;
+  background: linear-gradient(45deg, #FFF, #999999);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2rem 0;
+}
+.cabecalho .cabecalho__navegacao {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+  margin-left: 3rem;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__pesquisar {
+  display: inline-flex;
+  width: 500px;
+  height: 3.75rem;
+  border-radius: 24px;
+  margin: 1.375rem 6rem 1.375rem 0;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__pesquisar .cabecalho__navegacao__pesquisar__pesquisa {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #000;
+  background-color: #FFF;
+  width: 98%;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  padding-left: 1rem;
+  line-height: 25px;
+  padding-right: 5px;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__pesquisar .cabecalho__navegacao__pesquisar__pesquisa::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #B2B2B2;
+  background-image: url("../../assets/lupa.svg");
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 0.2rem;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__pesquisar .cabecalho__navegacao__pesquisar__pesquisa::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #B2B2B2;
+  background-image: url("../../assets/lupa.svg");
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 0.2rem;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome {
+  font-family: "Irish Grover", system-ui;
+  font-size: 1.75rem;
+  color: #FFF;
+  text-decoration: none;
+  margin-right: 2rem;
+}/*# sourceMappingURL=style.css.map */
