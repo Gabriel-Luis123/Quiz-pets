@@ -1,0 +1,61 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variaveis';
+
+.curiosidades{
+    display: flex;
+    flex-direction: column;
+    background-color: variaveis.$cor-quintenaria;
+    width: 16.6rem;
+    row-gap: 3rem;
+    padding: 1rem;
+    .curiosidades__animais{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .curiosidades__animais__foto{
+            .cachorro{
+                background-image: url(../../assets/imagem-golden.webp);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 12rem;
+                width: 12rem;
+                height: 11rem;
+                border-radius: 24px;
+                border: 2px solid variaveis.$cor-terciaria;
+                box-shadow: 2px 2px 4px rgb(0, 0, 0);
+            }
+            .gato{
+                background-image: url(../../assets/imagem-gato-laranja.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 18.8rem;
+                width: 12rem;
+                height: 11rem;
+                border-radius: 24px;
+                border: 2px solid variaveis.$cor-terciaria;
+                box-shadow: 2px 2px 4px rgb(0, 0, 0);
+            }
+            .rato{
+                background-image: url(../../assets/imagem-hamster.jfif);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 16rem;
+                width: 12rem;
+                height: 11rem;
+                border-radius: 24px;
+                border: 2px solid variaveis.$cor-terciaria;
+                box-shadow: 2px 2px 4px rgb(0, 0, 0);
+            }
+
+        }
+        .curiosidades__animais__titulo{
+            h2 {
+                @include mixins.ff-fs-cl(variaveis.$fonte-Indie-Flower,2rem,variaveis.$branco);
+                font-weight: 400;
+            }
+            
+            text-decoration: none;
+            
+        }
+    }
+}

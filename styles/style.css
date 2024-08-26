@@ -6,9 +6,12 @@
 
 body {
   width: 100vw;
+  height: 100vh;
 }
 
 main {
+  height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
@@ -113,4 +116,60 @@ main .quiz {
   color: #FFF;
   text-decoration: none;
   margin-right: 2rem;
+}
+
+.curiosidades {
+  display: flex;
+  flex-direction: column;
+  background-color: #554C45;
+  width: 16.6rem;
+  row-gap: 3rem;
+  padding: 1rem;
+}
+.curiosidades .curiosidades__animais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.curiosidades .curiosidades__animais .curiosidades__animais__foto .cachorro {
+  background-image: url(../../assets/imagem-golden.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 12rem;
+  width: 12rem;
+  height: 11rem;
+  border-radius: 24px;
+  border: 2px solid #FF9D52;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.curiosidades .curiosidades__animais .curiosidades__animais__foto .gato {
+  background-image: url(../../assets/imagem-gato-laranja.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18.8rem;
+  width: 12rem;
+  height: 11rem;
+  border-radius: 24px;
+  border: 2px solid #FF9D52;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.curiosidades .curiosidades__animais .curiosidades__animais__foto .rato {
+  background-image: url(../../assets/imagem-hamster.jfif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  width: 12rem;
+  height: 11rem;
+  border-radius: 24px;
+  border: 2px solid #FF9D52;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+.curiosidades .curiosidades__animais .curiosidades__animais__titulo {
+  text-decoration: none;
+}
+.curiosidades .curiosidades__animais .curiosidades__animais__titulo h2 {
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
+  color: #FFF;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
