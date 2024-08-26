@@ -1,0 +1,15 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variaveis';
+
+.rodape{
+    background-color: variaveis.$cor-quaternaria;
+    padding: 1rem 1rem 1rem 4rem;
+    text-align: start;
+    h2 {
+        @include mixins.ff-fs-cl(variaveis.$fonte-Inika, 1rem, variaveis.$branco);
+        a{
+            color: variaveis.$branco;
+            text-decoration: none;
+        }
+    }
+}

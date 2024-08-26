@@ -9,7 +9,7 @@
     background-color: variaveis.$preto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 0 ;
     .cabecalho__logo{
         display: flex;
@@ -31,41 +31,43 @@
     .cabecalho__navegacao{
         display: flex;
         justify-content: space-between;
-        width: 60%;
         align-items: center;
-        .cabecalho__navegacao__pesquisar{
-            display: inline-flex;
-            $largura-input: 500px;
-            width: $largura-input;
-            height: 3.5rem;
+    }
+    .cabecalho__navegacao__pesquisar{
+        margin-left: 2rem;
+        display: inline-flex;
+        $largura-input: 700px;
+        width: $largura-input;
+        height: 3.5rem;
+        border-radius: 24px;
+        border: 2px solid variaveis.$cor-quintenaria;
+        margin-right: 8rem;
+        .cabecalho__navegacao__pesquisar__pesquisa{
+            @include mixins.ff-fs-cl(variaveis.$fonte-Inter,1.2rem, variaveis.$preto);
+            background-color: variaveis.$branco;
+            width: 100%;
+            font-weight:400;
+            border: none;
+            outline: none;
             border-radius: 24px;
-            border: 2px solid variaveis.$cor-quintenaria;
-            margin-right: 8rem;
-            .cabecalho__navegacao__pesquisar__pesquisa{
-                @include mixins.ff-fs-cl(variaveis.$fonte-Inter,1.2rem, variaveis.$preto);
-                background-color: variaveis.$branco;
-                width: 100%;
-                font-weight:400;
-                border: none;
-                outline: none;
-                border-radius: 24px;
-                padding-left: 3rem;
-                line-height: 25px;
-                padding-right: 5px;
-                background-image: url('../assets/lupa.svg');
-                background-size: 2rem;
-                background-repeat: no-repeat;
-                background-position: 0.8rem center;
-                &::placeholder{
-                    @include mixins.ff-fs-cl(variaveis.$fonte-Inter,1.2rem, variaveis.$cinza);
-                    padding-right: 0.2rem;
-                }
-                &:focus{
-                    border: 3px solid variaveis.$cor-secundaria;
-                    transition: 0.2s;
-                }
+            padding-left: 3rem;
+            line-height: 25px;
+            padding-right: 5px;
+            background-image: url('../assets/lupa.svg');
+            background-size: 2rem;
+            background-repeat: no-repeat;
+            background-position: 0.8rem center;
+            &::placeholder{
+                @include mixins.ff-fs-cl(variaveis.$fonte-Inter,1.2rem, variaveis.$cinza);
+                padding-right: 0.2rem;
+            }
+            &:focus{
+                border: 3px solid variaveis.$cor-secundaria;
+                transition: 0.2s;
             }
         }
+    
+}
 
         .cabecalho__navegacao__categorias{
             display: flex;
@@ -90,4 +92,7 @@
             }    
         }
     }
-}
+
+    @media screen and (max-width:1600px){
+        
+    }

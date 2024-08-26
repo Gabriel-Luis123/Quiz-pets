@@ -1,0 +1,32 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variaveis';
+
+.submit {
+    padding-bottom: 4rem;
+    display: flex;
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    text-align: center;
+    .btn__submit{
+        @include mixins.ff-fs-cl(variaveis.$fonte-Irish-Grover,2rem ,variaveis.$branco);
+        padding: 2rem;
+        background-color: variaveis.$cor-quintenaria;
+        border-radius: 24px;
+        border: 2px solid variaveis.$cor-primaria;
+        box-shadow: 1px 1px 4px variaveis.$preto;
+        transition: transform 0.5s;
+        &:hover{
+            cursor: pointer;
+            background-color: variaveis.$cor-primaria;
+            color: variaveis.$preto;
+            border: 2px solid variaveis.$cor-quintenaria;
+            text-shadow: 2px 2px 2px variaveis.$branco;
+            transform: scale(1.3);
+        }
+    }
+    
+    
+}

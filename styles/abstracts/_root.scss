@@ -13,10 +13,11 @@ main {
     width: 98vw;
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     "menu menu"
-    "quiz curiosidades";
+    "quiz curiosidades"
+    "rodape curiosidades" ;
     .cabecalho {
         grid-area: menu;
     }
@@ -25,6 +26,9 @@ main {
     }
     .quiz {
         grid-area: quiz;
+    }
+    .rodape{
+        grid-area: rodape;
     }
 }
 
