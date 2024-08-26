@@ -85,7 +85,7 @@ main .quiz {
   padding-left: 3rem;
   line-height: 25px;
   padding-right: 5px;
-  background-image: url("../../assets/lupa.svg");
+  background-image: url("../assets/lupa.svg");
   background-size: 2rem;
   background-repeat: no-repeat;
   background-position: 0.8rem center;
@@ -149,7 +149,7 @@ main .quiz {
   align-items: center;
 }
 .curiosidades .curiosidades__animais .curiosidades__animais__foto .cachorro {
-  background-image: url(../../assets/imagem-golden.webp);
+  background: url(../assets/imagem-golden.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 12rem;
@@ -161,7 +161,7 @@ main .quiz {
   transition: transform 0.5s;
 }
 .curiosidades .curiosidades__animais .curiosidades__animais__foto .gato {
-  background-image: url(../../assets/imagem-gato-laranja.jpg);
+  background-image: url(../assets/imagem-gato-laranja.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 18.8rem;
@@ -173,7 +173,7 @@ main .quiz {
   transition: transform 0.5s;
 }
 .curiosidades .curiosidades__animais .curiosidades__animais__foto .rato {
-  background-image: url(../../assets/imagem-hamster.jfif);
+  background-image: url(../assets/imagem-hamster.jfif);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 16rem;
@@ -334,14 +334,20 @@ main .quiz {
   margin-top: 6rem;
 }
 .quiz .imagem2 {
-  background: url(../../assets/varios-cachorrinhos.jpg);
+  background: url(../assets/varios-cachorrinhos.jpg);
   background-position: center;
   background-size: 45rem;
   background-repeat: no-repeat;
 }
 .quiz .imagem3 {
-  background: url(../../assets/varios-gatinhos.jpg);
+  background: url(../assets/varios-gatinhos.jpg);
   background-position: center;
   background-size: 37rem;
+  background-repeat: no-repeat;
+}
+.quiz .imagem4 {
+  background: url(../assets/cor-gatos.jfif);
+  background-position: center;
+  background-size: 30rem;
   background-repeat: no-repeat;
 }/*# sourceMappingURL=style.css.map */

@@ -19,7 +19,7 @@
         align-items: center;
         .curiosidades__animais__foto{
             .cachorro{
-                background-image: url(../../assets/imagem-golden.webp);
+                background: url(../assets/imagem-golden.webp);
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 12rem;
@@ -31,7 +31,7 @@
                 transition: transform 0.5s;
             }
             .gato{
-                background-image: url(../../assets/imagem-gato-laranja.jpg);
+                background-image: url(../assets/imagem-gato-laranja.jpg);
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 18.8rem;
@@ -43,7 +43,7 @@
                 transition: transform 0.5s;
             }
             .rato{
-                background-image: url(../../assets/imagem-hamster.jfif);
+                background-image: url(../assets/imagem-hamster.jfif);
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: 16rem;
