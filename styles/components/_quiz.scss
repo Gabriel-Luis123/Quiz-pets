@@ -2,9 +2,10 @@
 @use '../abstracts/variaveis';
 
 .quiz {
+    padding-top: 4rem;
     display: flex;
     justify-content: space-between;
-    margin: 0 5rem;
+    margin: 0 18rem 0 2rem;
     .quiz__perguntas{
         margin-top: 4rem;
         display: grid;
@@ -29,9 +30,10 @@
                 grid-area: quantidade;
             }
             .quiz__perguntas__perguntando{
-                @include mixins.ff-fs-cl(variaveis.$fonte-Inika, 2.5rem, variaveis.$preto);
+                @include mixins.ff-fs-cl(variaveis.$fonte-Inika, 2rem, variaveis.$preto);
                 font-weight: 700;
                 grid-area: titulo;
+                width: 60rem;
             }
         }
         
@@ -86,14 +88,27 @@
                     color: variaveis.$preto;
                     }
                     .quiz__perguntas__alternativa__opcao__titulo{
-                        @include mixins.ff-fs-cl(variaveis.$fonte-Inder, 2rem, variaveis.$preto);
+                        @include mixins.ff-fs-cl(variaveis.$fonte-Inder, 1.5rem, variaveis.$preto);
                         background-color: variaveis.$cor-terciaria;
                         border-radius: 16px;
-                        padding: 0.2rem;
                         font-weight: 400;
-                        width: 16rem;
+                        padding: 1rem;
+                        width: 40rem;
                         text-align: center;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: variaveis.$cor-primaria;
+                            color: variaveis.$branco;
+                            transition: 0.3s;
+                        }
                     }
+                }
+                .frase__interrogativa{
+                    @include mixins.ff-fs-cl(variaveis.$fonte-Inder, 2rem, variaveis.$cinza);
+                    background-color: variaveis.$preto;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    width: 50rem;
                 }
             }
         }
@@ -106,5 +121,17 @@
         border: 4px solid variaveis.$cor-quintenaria;
         box-shadow: 4px 4px 8px variaveis.$preto;
         margin-top: 6rem;
+    }
+    .imagem2{
+        background: url(../../assets/varios-cachorrinhos.jpg);
+        background-position: center;
+        background-size: 45rem;
+        background-repeat: no-repeat;
+    }
+    .imagem3{
+        background: url(../../assets/varios-gatinhos.jpg);
+        background-position: center;
+        background-size: 37rem;
+        background-repeat: no-repeat;
     }
 }

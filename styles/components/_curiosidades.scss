@@ -2,8 +2,13 @@
 @use '../abstracts/variaveis';
 
 .curiosidades{
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: variaveis.$cor-quintenaria;
     width: 16.6rem;
     row-gap: 3rem;
