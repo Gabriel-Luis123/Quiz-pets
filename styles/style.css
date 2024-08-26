@@ -193,4 +193,33 @@ main .quiz {
 .curiosidades .curiosidades__animais .curiosidades__animais__titulo:hover h2 {
   color: #D59767;
   transform: scale(1.2);
+}
+
+.quiz {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+}
+.quiz .quiz__perguntas {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "quantidade titulo" "questionario questionario";
+}
+.quiz .quiz__perguntas .quiz__perguntas__quantidade {
+  grid-area: quantidade;
+}
+.quiz .quiz__perguntas .quiz__perguntas__perguntando {
+  grid-area: titulo;
+}
+.quiz .quiz__perguntas .quiz__perguntas__alternativa {
+  grid-area: questionario;
+}
+.quiz .quiz__imagem {
+  width: 30rem;
+  height: 25rem;
+  border-radius: 57px;
+  border: 4px solid #554C45;
+  box-shadow: 4px 4px 8px #000;
+  margin-top: 6rem;
 }/*# sourceMappingURL=style.css.map */
