@@ -35,7 +35,7 @@
                 align-self: flex-start;
             }
             .quiz__perguntas__perguntando{
-                width: 100%;
+                width: auto;
                 @include mixins.ff-fs-cl(variaveis.$fonte-Inika, 2rem, variaveis.$preto);
                 font-weight: 700;
                 grid-area: titulo;
@@ -147,7 +147,7 @@
         border: 4px solid variaveis.$cor-quintenaria;
         box-shadow: 4px 4px 8px variaveis.$preto;
         margin-top: 6rem;
-        width: 100%;
+        width: 50%;
         height: 30rem;
     }
     
@@ -237,5 +237,17 @@
         background-position: center;
         background-size: 34rem;
         background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width:1648px ) {
+    .quiz{
+        align-items: start;
+        flex-direction: column;
+        margin: 0 auto 0 2rem;
+    }
+    .quiz__imagem{
+        width: 10rem;
+        margin-left: 4rem;
     }
 }

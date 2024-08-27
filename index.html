@@ -23,11 +23,24 @@
             </div>
             <nav class="cabecalho__navegacao">
                 <ul class="cabecalho__navegacao__categorias">
-                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">cachorros</a></li>
-                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">gatos</a></li>
-                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">ratos</a></li>
-                    <li><a href="#" class="cabecalho__navegacao__categorias__nome">variados</a></li>
+                    <li><a href="#cachorro" class="cabecalho__navegacao__categorias__nome">cachorros</a></li>
+                    <li><a href="#gato" class="cabecalho__navegacao__categorias__nome">gatos</a></li>
+                    <li><a href="#ratos" class="cabecalho__navegacao__categorias__nome">ratos</a></li>
+                    <li><a href="#variados" class="cabecalho__navegacao__categorias__nome">variados</a></li>
                 </ul>
+
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="assets/menu.svg" alt="Menu"></button>
+                </div>
+
+                <div class="mobile-menu">
+                    <ul class="cabecalho__navegacao__categorias">
+                        <li><a href="#cachorro" class="cabecalho__navegacao__categorias__nome">cachorros</a></li>
+                        <li><a href="#gato" class="cabecalho__navegacao__categorias__nome">gatos</a></li>
+                        <li><a href="#ratos" class="cabecalho__navegacao__categorias__nome">ratos</a></li>
+                        <li><a href="#variados" class="cabecalho__navegacao__categorias__nome">variados</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <section class="curiosidades">
@@ -51,7 +64,7 @@
             </div>
         </section>
         <section class="container">
-        <div class="quiz">
+        <div id="cachorro" class="quiz">
                 <div class="quiz__perguntas">
                     <div class="quiz__perguntas__p">
                         <h2 class="quiz__perguntas__quantidade">1</h2>
@@ -240,7 +253,7 @@
             </div>
             <div class="quiz__imagem imagem10 quiz__imagem4"></div>
         </div>
-        <div class="quiz">
+        <div id="gato" class="quiz">
                 <div class="quiz__perguntas">
                     <div class="quiz__perguntas__p">
                         <h2 class="quiz__perguntas__quantidade">4</h2>
@@ -457,7 +470,7 @@
             </div>
             <div class="quiz__imagem imagem6"></div>
         </div>
-        <div class="quiz">
+        <div id="ratos" class="quiz">
             <div class="quiz__perguntas">
                 <div class="quiz__perguntas__p">
                     <h2 class="quiz__perguntas__quantidade">8</h2>
@@ -522,7 +535,7 @@
             </div>
             <div class="quiz__imagem imagem8 quiz__imagem3"></div>
         </div>
-        <div class="quiz">
+        <div id="variados" class="quiz">
             <div class="quiz__perguntas">
                 <div class="quiz__perguntas__p">
                     <h2 class="quiz__perguntas__quantidade">9</h2>
@@ -673,5 +686,7 @@
             <h2>Esse site foi feito pela <a href="#">Izabela Martins</a> e <a href="#">Gabriel Luis</a></h2>
         </footer>
     </main>
+
+    <script src="Js/script.js"></script>
 </body>
 </html>

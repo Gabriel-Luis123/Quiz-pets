@@ -31,7 +31,7 @@ main .rodape {
 }
 
 .cabecalho {
-  height: 10%;
+  height: 16%;
   width: 100%;
   top: 0;
   position: fixed;
@@ -65,6 +65,36 @@ main .rodape {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome {
+  font-family: "Irish Grover", system-ui;
+  font-size: 1.5rem;
+  color: #FFF;
+  text-decoration: none;
+  padding: 1rem;
+  margin-right: 2rem;
+  text-shadow: 2px 2px 2px #000;
+}
+.cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome:hover {
+  color: #D59767;
+  transition: 0.8s;
+  background-color: #FFF;
+  border-radius: 4px;
+}
+.cabecalho .cabecalho__navegacao .mobile-menu-icon {
+  display: none;
+  position: relative;
+}
+.cabecalho .cabecalho__navegacao .mobile-menu {
+  display: none;
 }
 .cabecalho .cabecalho__navegacao__pesquisar {
   margin-left: 2rem;
@@ -109,34 +139,72 @@ main .rodape {
   border: 3px solid #AA896F;
   transition: 0.2s;
 }
-.cabecalho .cabecalho__navegacao__categorias {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-between;
-  align-items: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-.cabecalho .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome {
-  font-family: "Irish Grover", system-ui;
-  font-size: 1.5rem;
-  color: #FFF;
-  text-decoration: none;
-  padding: 1rem;
-  margin-right: 2rem;
-  text-shadow: 2px 2px 2px #000;
-}
-.cabecalho .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome:hover {
-  color: #D59767;
-  transition: 0.8s;
-  background-color: #FFF;
-  border-radius: 4px;
-}
 
+@media screen and (max-width: 2000px) {
+  .cabecalho__navegacao__categorias__nome {
+    display: none;
+  }
+  .cabecalho {
+    justify-content: space-between;
+    height: 14%;
+    flex-direction: row-reverse;
+  }
+  .cabecalho .cabecalho__logo {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-right: 2rem;
+  }
+  .cabecalho.open .mobile-menu {
+    display: block;
+    max-height: 40rem;
+    opacity: 1;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  .cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome {
+    background-color: #000;
+    width: 12rem;
+  }
+  .cabecalho .cabecalho__navegacao .cabecalho__navegacao__categorias li .cabecalho__navegacao__categorias__nome:hover {
+    margin-right: -2rem;
+    background-color: #B2B2B2;
+    width: 12rem;
+  }
+  .cabecalho .cabecalho__navegacao .mobile-menu-icon {
+    display: block;
+    padding-right: 6.5rem;
+    padding-left: -6.3rem;
+  }
+  .cabecalho .cabecalho__navegacao .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .cabecalho .cabecalho__navegacao .mobile-menu-icon button img {
+    width: 3rem;
+  }
+  .cabecalho .cabecalho__navegacao .mobile-menu .cabecalho__navegacao__categorias {
+    margin-top: 3.2rem;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .cabecalho .cabecalho__navegacao .mobile-menu .cabecalho__navegacao__categorias .cabecalho__navegacao__categorias__nome {
+    display: block;
+    padding-top: 1.2rem;
+  }
+}
 .curiosidades {
   right: 0;
   bottom: 0;
-  height: 90%;
+  height: 86%;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -247,7 +315,7 @@ main .rodape {
   align-self: flex-start;
 }
 .quiz .quiz__perguntas .quiz__perguntas__p .quiz__perguntas__perguntando {
-  width: 100%;
+  width: auto;
   font-family: "Inika", serif;
   font-size: 2rem;
   color: #000;
@@ -360,7 +428,7 @@ main .rodape {
   border: 4px solid #554C45;
   box-shadow: 4px 4px 8px #000;
   margin-top: 6rem;
-  width: 100%;
+  width: 50%;
   height: 30rem;
 }
 .quiz .imagem1 {
@@ -439,6 +507,17 @@ main .rodape {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1648px) {
+  .quiz {
+    align-items: start;
+    flex-direction: column;
+    margin: 0 auto 0 2rem;
+  }
+  .quiz__imagem {
+    width: 10rem;
+    margin-left: 4rem;
+  }
+}
 .submit {
   padding-bottom: 4rem;
   display: flex;

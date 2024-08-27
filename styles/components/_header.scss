@@ -2,7 +2,7 @@
 @use '../abstracts/mixins';
 
 .cabecalho {
-    height: 10%;
+    height: 16%;
     width: 100%;
     top: 0;
     position: fixed;
@@ -32,6 +32,36 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .cabecalho__navegacao__categorias{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 1rem;
+            li {
+                .cabecalho__navegacao__categorias__nome{
+                    @include mixins.ff-fs-cl(variaveis.$fonte-Irish-Grover,1.5rem,variaveis.$branco);
+                    text-decoration: none;
+                    padding: 1rem;
+                    margin-right: 2rem;
+                    text-shadow: 2px 2px 2px variaveis.$preto;
+                    &:hover{
+                        color: variaveis.$cor-primaria;
+                        transition: 0.8s;
+                        background-color: variaveis.$branco;
+                        border-radius: 4px;
+                    }
+                }
+            }    
+        }
+        .mobile-menu-icon{
+            display: none;
+            position: relative;
+        }
+        .mobile-menu{
+            display: none;
+            
+        }
     }
     .cabecalho__navegacao__pesquisar{
         margin-left: 2rem;
@@ -68,31 +98,76 @@
         }
     
 }
+    }
 
-        .cabecalho__navegacao__categorias{
+@media screen and (max-width:2000px){
+    .cabecalho__navegacao__categorias__nome{
+        display: none;
+    } 
+
+    .cabecalho{
+        justify-content: space-between;
+        height: 14%;
+        flex-direction: row-reverse;
+        .cabecalho__logo{
             display: flex;
-            list-style-type: none;
-            justify-content: space-between;
-            align-items: center;
-            column-gap: 1rem;
-            li {
-                .cabecalho__navegacao__categorias__nome{
-                    @include mixins.ff-fs-cl(variaveis.$fonte-Irish-Grover,1.5rem,variaveis.$branco);
-                    text-decoration: none;
-                    padding: 1rem;
-                    margin-right: 2rem;
-                    text-shadow: 2px 2px 2px variaveis.$preto;
-                    &:hover{
-                        color: variaveis.$cor-primaria;
-                        transition: 0.8s;
-                        background-color: variaveis.$branco;
-                        border-radius: 4px;
+            flex-wrap: nowrap;
+            padding-right: 2rem;
+        }
+        &.open{
+            .mobile-menu {
+                display: block;
+                max-height: 40rem; // Ajuste conforme necessário
+                opacity: 1;
+                transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+            }
+        }
+        .cabecalho__navegacao{
+            .cabecalho__navegacao__categorias{
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .cabecalho__navegacao__categorias__nome{
+                        background-color: variaveis.$preto;
+                        width: 12rem;
+                        &:hover{
+                            margin-right: -2rem;
+                            background-color: variaveis.$cinza;
+                            width: 12rem;
+                        }
                     }
                 }
-            }    
+            }
+            
+            .mobile-menu-icon{
+                display: block;
+                padding-right: 6.5rem;
+                padding-left: -6.3rem;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    img {
+                        width: 3rem;
+                    }
+                }
+            }
+            .mobile-menu {
+                .cabecalho__navegacao__categorias {
+                    margin-top: 3.2rem;
+                    left: 0;
+                    position: fixed;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding-bottom: 1rem;
+                    .cabecalho__navegacao__categorias__nome{
+                        display: block;
+                        padding-top: 1.2rem;
+                    }
+                }
+            }
         }
     }
-
-    @media screen and (max-width:1600px){
-        
-    }
+}
