@@ -79,11 +79,12 @@ function verificarCheckbox(resposta) {
             selecionado = resposta__correto;  
             if (
               selecionado.id === "camundongo-checkbox" ||
-              selecionado.id === "rato" ||
+              selecionado.id === "ratos-5" ||
               selecionado.id === "Cacatua" ||
               selecionado.id === "mini-porquinho" ||
               selecionado.id === "Jiboia"
           ) {
+              console.log(acertosCheckbox)
               acertosCheckbox++
             } else{
               label_id = selecionado.id + "_label"
@@ -150,27 +151,21 @@ document.querySelector('#verificar').addEventListener('click', () => {
     
     verificarCheckbox(anwser9,anwser9Cor)
   
-    if (acertosCheckbox>0 || errosCheckbox>0){
-      if(acertosCheckbox == 5 && errosCheckbox == 0){
-        errosCheckbox += 5 - acertosCheckbox
-        acertosCheckbox += 2
-        textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
+    if (acertosCheckbox > 0 || errosCheckbox > 0) {
+      if (acertosCheckbox < 5) {
+          errosCheckbox += 5 - acertosCheckbox;
+          if (errosCheckbox == 0) {
+              acertosCheckbox += 2;
+          } else if (errosCheckbox == 1) {
+              acertosCheckbox += 1;
+          }
+      } else if (acertosCheckbox == 5 && errosCheckbox == 1) {
+          acertosCheckbox++;
       }
-      if(acertosCheckbox< 5 && errosCheckbox == 1){
-        errosCheckbox += 5 - acertosCheckbox
-        acertosCheckbox += 1
-        textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
-      }
-      if(acertosCheckbox< 5 && errosCheckbox == 2){
-        errosCheckbox += 5 - acertosCheckbox
-        acertosCheckbox += 0
-        textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
-      }
-      
-    }
+  
+      textoFormatadoCheckbox.style.display = 'block';
+      textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`;
+  }
     
     acertos = 0
     erros = 0
