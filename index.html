@@ -13,6 +13,9 @@
 <body>
     <main>
         <header class="cabecalho">
+            <div class="curiosidades__menu">
+                <button onclick="curiosidadesShow()"><img class="icon" src="assets/curiosidades-menu.svg" alt="Menu"></button>
+            </div>
             <section class="cabecalho__logo">
                 <img src="assets/favicon-quiz-pets.png" alt="Icone do site Quiz sobre Pets" class="cabecalho__navegacao__logo">
                 <h1 class="cabecalho__navegacao__titulo">Quiz sobre pets</h1>
@@ -41,28 +44,29 @@
                         <li><a href="#variados" class="cabecalho__navegacao__categorias__nome">variados</a></li>
                     </ul>
                 </div>
+
+                <div class="curiosidades">
+                    <div class="curiosidades__animais">
+                        <a class="curiosidades__animais__titulo" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank">
+                            <h2>saiba mais</h2>
+                        </a>
+                        <a class="curiosidades__animais__foto" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank"><div class="cachorro"></div></a>
+                    </div>
+                    <div class="curiosidades__animais">
+                        <a class="curiosidades__animais__titulo" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank">
+                            <h2>saiba mais</h2>
+                        </a>
+                        <a class="curiosidades__animais__foto" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank"><div class="gato"></div></a>
+                    </div>
+                    <div class="curiosidades__animais">
+                        <a class="curiosidades__animais__titulo" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank">
+                            <h2>saiba mais</h2>
+                        </a>
+                        <a class="curiosidades__animais__foto" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank"><div class="rato"></div></a>
+                    </div>
+                </div>
             </nav>
         </header>
-        <section class="curiosidades">
-            <div class="curiosidades__animais">
-                <a class="curiosidades__animais__titulo" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank">
-                    <h2>saiba mais</h2>
-                </a>
-                <a class="curiosidades__animais__foto" href="https://optimumpet.com.br/dicas-e-conselhos/cuidados-com-caes-10-dicas-de-saude-para-seu-cachorro-viver-mais/" target="_blank"><div class="cachorro"></div></a>
-            </div>
-            <div class="curiosidades__animais">
-                <a class="curiosidades__animais__titulo" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank">
-                    <h2>saiba mais</h2>
-                </a>
-                <a class="curiosidades__animais__foto" href="https://blog.cobasi.com.br/tudo-sobre-gato/" target="_blank"><div class="gato"></div></a>
-            </div>
-            <div class="curiosidades__animais">
-                <a class="curiosidades__animais__titulo" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank">
-                    <h2>saiba mais</h2>
-                </a>
-                <a class="curiosidades__animais__foto" href="https://www.folhape.com.br/colunistas/folha-pet/rato-pet-saiba-quais-sao-os-principais-cuidados-com-esse-animalzinho/34197/" target="_blank"><div class="rato"></div></a>
-            </div>
-        </section>
         <section class="container">
         <div id="cachorro" class="quiz">
                 <div class="quiz__perguntas">
@@ -73,52 +77,52 @@
                     <ul class="quiz__perguntas__alternativa">
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="pais" id="Noruega" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="pais" id="Noruega" value="Noruega" class="errada hidden">
                             <label for="Noruega">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Noruega</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Noruega</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="pais" id="Dinamarca" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="pais" id="Dinamarca" value="Dinamarca" class="errada hidden">
                             <label for="Dinamarca">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Dinamarca</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Dinamarca</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="pais" id="Gales" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" required name="pais" id="Gales" value="Gales" class="correta hidden">
                             <label for="Gales">
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Pais de Gales</h3>
+                                <h3 id="resposta1" class="quiz__perguntas__alternativa__opcao__titulo certo normal">País de Gales</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="pais" id="Eua" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="pais" id="Eua" value="Eua" class="errada hidden">
                             <label for="Eua">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Estados Unidos</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Estados Unidos</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                            <input type="radio" name="pais" id="Inglaterra" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="pais" id="Inglaterra" value="Inglaterra" class="errada hidden">
                             <label for="Inglaterra">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Inglaterra</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Inglaterra</h3>
                             </label>
                         </li>
                     </ul>
@@ -134,52 +138,52 @@
                     <ul class="quiz__perguntas__alternativa">
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="inteligente" id="Pastor" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="inteligente" id="Pastor" value="Pastor" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Pastor">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Pastor Alemão</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Pastor Alemão</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="inteligente" id="Retriever" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="inteligente" id="Retriever" value="Retriever" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Retriever">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Golden Retriever</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Golden Retriever</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="inteligente" id="Doberman" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="inteligente" id="Doberman" value="Doberman" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Doberman">
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Doberman</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Doberman</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="inteligente" id="Colie" class="quiz__perguntas__alternativa__opcao__selecionar">
-                            <label for="Colie">
+                                <input type="radio" name="inteligente" id="Collie" value="Collie" class="quiz__perguntas__alternativa__opcao__selecionar" >
+                            <label for="Collie">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Border Collie</h3>
+                                <h3 id="resposta2" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Border Collie</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                            <input type="radio" name="inteligente" id="Labrador" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="inteligente" id="Labrador" value="Labrador" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Labrador">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Labrador</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Labrador</h3>
                             </label>
                         </li>
                     </ul>
@@ -190,62 +194,62 @@
             <div class="quiz__perguntas">
                 <div class="quiz__perguntas__p">
                     <h2 class="quiz__perguntas__quantidade">3</h2>
-                    <h2 class="quiz__perguntas__perguntando perguntas__grande">Quais as 5 raças de cachorros mais populares no brasil em ordem?
+                    <h2 class="quiz__perguntas__perguntando perguntas__grande">Quais as 5 raças de cachorros mais populares no Brasil em ordem?
                     </h2>
                 </div>
                 <ul class="quiz__perguntas__alternativa">
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="radio" name="racas" id="poodle" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="racas" id="poodle" value="poodle" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="poodle">
                              <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Poodle, vira-lata, shih tzu, yorkshire, lhasa apso
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Poodle, vira-lata, shih tzu, yorkshire, lhasa apso
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="radio" name="racas" id="vira-lata-errado" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="racas" id="vira-lata-errado" value="vira-lata-errado" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="vira-lata-errado">
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Vira-lata, shih tzu, yorkshire, lhasa apso, poodle</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Vira-lata, shih tzu, yorkshire, lhasa apso, poodle</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="radio" name="racas" id="shihtzu-1" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="racas" id="shihtzu-1" value="shihtzu-1" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="shihtzu-1">
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Shih tzu, vira-lata, lhasa apso, yorkshire, poodle
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Shih tzu, vira-lata, lhasa apso, yorkshire, poodle
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="radio" name="racas" id="vira-lata-certo" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="radio" name="racas" id="vira-lata-certo" value="vira-lata-certo" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="vira-lata-certo">
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Vira-lata, shih tzu, yorkshire, poodle, lhasa apso
+                            <h3 id="resposta3" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Vira-lata, shih tzu, yorkshire, poodle, lhasa apso
 
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                        <input type="radio" name="racas" id="shihtzu-2" class="quiz__perguntas__alternativa__opcao__selecionar">
+                        <input type="radio" name="racas" id="shihtzu-2" value="shihtzu-2" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="shihtzu-2">
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Shih tzu, vira-lata, yorkshire, poodle, lhasa apso
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Shih tzu, vira-lata, yorkshire, poodle, lhasa apso
                             </h3>
                         </label>
                     </li>
@@ -262,44 +266,44 @@
                     <ul class="quiz__perguntas__alternativa">
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="gatos-correto" id="Femeas-felinas" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="gatos-correto" id="Femeas-felinas" value="Femeas-felinas" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Femeas-felinas">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">
                                 A maior parte das fêmeas felinas são canhotas, enquanto os machos são destros.
                                 </h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="gatos-correto" id="Femeas" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="gatos-correto" id="Femeas" value="Femeas" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Femeas">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">A maior parte das fêmeas felinas são destras, enquanto os machos são canhotos.</h3>
+                                <h3 id="resposta4" class="quiz__perguntas__alternativa__opcao__titulo certo normal">A maior parte das fêmeas felinas são destras, enquanto os machos são canhotos.</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="gatos-correto" id="Canhotos" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="gatos-correto" id="Canhotos" value="Canhotos" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Canhotos">
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">A maior parte dos felinos são canhotos.</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">A maior parte dos felinos são canhotos.</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="gatos-correto" id="Destros" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="gatos-correto" id="Destros" value="Destros" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Destros">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">A maior parte dos felinos são destros.
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">A maior parte dos felinos são destros.
                                 </h3>
                             </label>
                         </li>
@@ -319,43 +323,43 @@
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="cor" id="Branco" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="cor" id="Branco" value="Branco" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Branco">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Branco
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Branco
                                 </h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="cor" id="Rajado" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="cor" id="Rajado" value="Rajado" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Rajado">
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Rajado</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Rajado</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="cor" id="Preto" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="cor" id="Preto" value="Preto" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Preto">
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Preto</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Preto</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
                 
-                                <input type="radio" name="cor" id="Laranja" class="quiz__perguntas__alternativa__opcao__selecionar">
+                                <input type="radio" name="cor" id="Laranja" value="Laranja" class="quiz__perguntas__alternativa__opcao__selecionar">
                             <label for="Laranja">
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Laranja
+                                <h3 id="resposta5" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Laranja
                                 </h3>
                             </label>
                         </li>
@@ -377,7 +381,7 @@
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Tem pernas curtas
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Tem pernas curtas
                                 </h3>
                             </label>
                         </li>
@@ -388,7 +392,7 @@
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">Tem uma pelagem com aspecto de lã</h3>
+                                <h3 id="resposta6" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Tem uma pelagem com aspecto de lã</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
@@ -398,7 +402,7 @@
                                 <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Em sua maioria possuem heterocromia</h3>
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Em sua maioria possuem heterocromia</h3>
                             </label>
                         </li>
                         <li class="quiz__perguntas__alternativa__opcao">
@@ -408,7 +412,7 @@
                                  <div class="custom-radio">
                                     <span></span>
                                 </div>
-                                <h3 class="quiz__perguntas__alternativa__opcao__titulo">É a raça de gatos mais inteligente
+                                <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">É a raça de gatos mais inteligente
                                 </h3>
                             </label>
                         </li>
@@ -431,7 +435,7 @@
                              <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Pele
+                            <h3 id="resposta7" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Pele
                             </h3>
                         </label>
                     </li>
@@ -442,7 +446,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Olhos</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Olhos</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
@@ -452,7 +456,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Pernas</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Pernas</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
@@ -462,7 +466,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Orelhas
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Orelhas
                             </h3>
                         </label>
                     </li>
@@ -485,7 +489,7 @@
                              <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Chinchila
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Chinchila
                             </h3>
                         </label>
                     </li>
@@ -496,7 +500,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Hamster</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Hamster</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
@@ -506,7 +510,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Gerbil</h3>
+                            <h3 id="resposta8" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Gerbil</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
@@ -516,7 +520,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Camundongo
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Camundongo
                             </h3>
                         </label>
                     </li>
@@ -527,7 +531,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">ratazana
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Ratazana
                         </h3>
                         </label>
                     </li>
@@ -545,76 +549,75 @@
                 <ul class="quiz__perguntas__alternativa">
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="checkbox" name="camundongo" id="camundongo" class="quiz__perguntas__alternativa__opcao__selecionar">
-                        <label for="camundongo">
-                             <div class="custom-radio quadrado2">
-                                <span class="quadrado"></span>
-                            </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">camundongo
-                            </h3>
-                        </label>
-                    </li>
+                        <input type="checkbox" name="checkbox" id="camundongo-checkbox" class="quiz__perguntas__alternativa__opcao__selecionar">
+                    <label for="camundongo-checkbox">
+                        <div class="custom-radio quadrado2">
+                            <span class="quadrado"></span>
+                        </div>
+                        <h3 class="quiz__perguntas__alternativa__opcao__titulo certo normal respostas__corretas">Camundongo</h3>
+                    </label>
+                </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="checkbox" name="capivara" id="capivara" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="checkbox" name="checkbox" id="capivara" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="capivara">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">capivara</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Capivara</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="checkbox" name="rato" id="rato" class="quiz__perguntas__alternativa__opcao__selecionar">
+                            <input type="checkbox" name="checkbox" id="rato" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="rato">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">rato</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo certo normal respostas__corretas">Rato</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                            <input type="checkbox" name="Sagu" id="sagu" class="quiz__perguntas__alternativa__opcao__selecionar">
-                        <label for="sagu">
+                            <input type="checkbox" name="checkbox" id="sagui" class="quiz__perguntas__alternativa__opcao__selecionar">
+                        <label for="sagui">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Sagu
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal ">Sagui
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                        <input type="checkbox" name="mini-porco" id="mini-porquinho" class="quiz__perguntas__alternativa__opcao__selecionar">
+                        <input type="checkbox" name="checkbox" id="mini-porquinho" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="mini-porquinho">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Mini porco
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo certo normal respostas__corretas">Mini porco
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                        <input type="checkbox" name="Cacatua" id="Cacatua" class="quiz__perguntas__alternativa__opcao__selecionar">
+                        <input type="checkbox" name="checkbox" id="Cacatua" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="Cacatua">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Cacatua
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo certo normal respostas__corretas">Cacatua
                             </h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
             
-                        <input type="checkbox" name="jiboia" id="Jiboia" class="quiz__perguntas__alternativa__opcao__selecionar">
+                        <input type="checkbox" name="checkbox" id="Jiboia" class="quiz__perguntas__alternativa__opcao__selecionar">
                         <label for="Jiboia">
                             <div class="custom-radio quadrado2">
                                 <span class="quadrado"></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Jiboia
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo certo normal respostas__corretas">Jiboia
                             </h3>
                         </label>
                     </li>
@@ -626,7 +629,7 @@
             <div class="quiz__perguntas">
                 <div class="quiz__perguntas__p">
                     <h2 class="quiz__perguntas__quantidade">10</h2>
-                    <h2 class="quiz__perguntas__perguntando perguntas__grande">Quais são os pets mais comuns do brasil respectivamente? 
+                    <h2 class="quiz__perguntas__perguntando perguntas__grande">Quais são os pets mais comuns do Brasil respectivamente? 
                     </h2>
                 </div>
                 <ul class="quiz__perguntas__alternativa">
@@ -637,7 +640,7 @@
                              <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Gatos, cachorros,  aves, peixes, roedores, tartarugas
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Gatos, cachorros,  aves, peixes, roedores, tartarugas
                             </h3>
                         </label>
                     </li>
@@ -648,7 +651,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Cachorros, gatos,  peixes, aves, tartarugas, roedores</h3>
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Cachorros, gatos,  peixes, aves, tartarugas, roedores</h3>
                         </label>
                     </li>
                     <li class="quiz__perguntas__alternativa__opcao">
@@ -658,7 +661,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo ">Gatos, cachorros, peixes, roedores, aves, tartarugas
+                            <h3 class="quiz__perguntas__alternativa__opcao__titulo erro normal">Gatos, cachorros, peixes, roedores, aves, tartarugas
                             </h3>
                         </label>
                     </li>
@@ -669,7 +672,7 @@
                             <div class="custom-radio">
                                 <span></span>
                             </div>
-                            <h3 class="quiz__perguntas__alternativa__opcao__titulo">Cachorros, gatos, aves, peixes, roedores, tartarugas
+                            <h3 id="resposta10" class="quiz__perguntas__alternativa__opcao__titulo certo normal">Cachorros, gatos, aves, peixes, roedores, tartarugas
 
                             </h3>
                         </label>
@@ -680,7 +683,11 @@
         </div>
         </section>
         <section class="submit">
-            <button class="btn__submit">Enviar</button>
+            <button type="submit" class="btn__submit" id="verificar">Enviar</button>
+        </section>
+        <section class="resposta">
+            <h3 class="resposta__titulo" id="mensagemResultado" style="display:none"></h3>
+            <h3 class="resposta__titulo" id="mensagemCheckboxResultado" style="display:none"></h3>
         </section>
         <footer class="rodape">
             <h2>Esse site foi feito pela <a href="#">Izabela Martins</a> e <a href="#">Gabriel Luis</a></h2>

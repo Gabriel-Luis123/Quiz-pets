@@ -3,8 +3,9 @@
 
 .rodape{
     background-color: variaveis.$cor-quaternaria;
-    padding: 1rem 1rem 1rem 4rem;
+    padding: 1rem 0rem 1rem 4rem;
     text-align: start;
+    width: 98.9vw;
     h2 {
         @include mixins.ff-fs-cl(variaveis.$fonte-Inika, 1rem, variaveis.$branco);
         a{

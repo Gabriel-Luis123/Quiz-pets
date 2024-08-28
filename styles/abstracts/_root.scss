@@ -17,9 +17,14 @@ main {
     grid-template-areas: 
     "menu menu"
     "quiz curiosidades"
-    "rodape curiosidades" ;
+    "botao curiosidades"
+    "resposta curiosidades"
+    "rodape curiosidades" ; 
     .cabecalho {
         grid-area: menu;
+    }
+    .submit{
+        grid-area: botao;
     }
     .curiosidades {
         grid-area: curiosidades;
@@ -29,6 +34,9 @@ main {
     }
     .rodape{
         grid-area: rodape;
+    }
+    .resposta{
+        grid-area: resposta;
     }
 }
 

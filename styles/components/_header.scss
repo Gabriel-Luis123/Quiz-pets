@@ -11,6 +11,19 @@
     align-items: center;
     justify-content: space-around;
     padding: 1rem 0 ;
+    .curiosidades__menu{
+        display: block;
+            padding-right: 3.5rem;
+            padding-left: 1rem;
+            button{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                img {
+                    width: 3rem;
+                }
+            }
+    }
     .cabecalho__logo{
         display: flex;
         column-gap: 1rem;
@@ -155,7 +168,7 @@
             }
             .mobile-menu {
                 .cabecalho__navegacao__categorias {
-                    margin-top: 3.2rem;
+                    top: 14%;
                     left: 0;
                     position: fixed;
                     display: flex;

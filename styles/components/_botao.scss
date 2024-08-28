@@ -2,12 +2,9 @@
 @use '../abstracts/variaveis';
 
 .submit {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     display: flex;
     bottom: 0;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
     justify-content: center;
     text-align: center;
     .btn__submit{
