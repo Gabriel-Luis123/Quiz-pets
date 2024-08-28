@@ -39,6 +39,31 @@ const textoFormatado = document.getElementById('mensagemResultado')
 const textoFormatadoCheckbox = document.getElementById('mensagemCheckboxResultado')
 const opcaoSelecionada = verificarSelecionado(anwser1);
 const botaoReset = document.querySelector('#reset');
+const pesquisarInput = document.getElementById('Pesquisar')
+
+pesquisarInput.addEventListener("keypress", function(event) {
+  
+  if (event.key === "Enter") {
+    event.preventDefault();
+
+    var idDigitado = event.target.value
+    if (idDigitado.endsWith("s")) {
+      idDigitado = idDigitado.slice(0, -1);
+    }
+
+
+    var elemento = document.getElementById(idDigitado)
+
+    if (elemento) {
+      elemento.scrollIntoView({ behavior: 'smooth'})
+
+      event.target.value = "";
+    } else{
+     alert("A palavra digitada não está computada nessa página")
+    }
+  }
+})
+
 console.log(anwser9Cor)
 
 let acertosCheckbox = 0
