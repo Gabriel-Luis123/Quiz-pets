@@ -46,7 +46,7 @@ let errosCheckbox = 0
 let acertos = 0
 let erros = 0
 
-function verificarCheckbox(resposta,cor) {
+function verificarCheckbox(resposta) {
   let selecionado;
     resposta.forEach((resposta__correto) => {
         if (resposta__correto.checked) {
@@ -61,6 +61,9 @@ function verificarCheckbox(resposta,cor) {
           ) {
               acertosCheckbox++
             } else{
+              label_id = selecionado.id + "_label"
+              const labelElemente = document.getElementById(label_id)
+              labelElemente.classList.remove('normal')
               errosCheckbox++
             }
         }
@@ -91,6 +94,9 @@ function verificarOpcaoSelecionada(selecionada, idUsado, Cor) {
     } else {
       if (selecionada.id != null){
         erros ++
+        label_id = selecionada.id + "_label"
+        const labelElemente = document.getElementById(label_id)
+        labelElemente.classList.remove('normal')
         Cor.classList.remove('normal')
       } 
         
@@ -114,29 +120,31 @@ document.querySelector('#verificar').addEventListener('click', () => {
     verificarOpcaoSelecionada(verificarSelecionado(anwser10), anwser10Resposta, anwser10Cor)
     if (acertos >0 || erros>0){
       textoFormatado.style.display = 'block';
-      textoFormatado.innerHTML = `Resultado de todas questões menos o checkbox: Você acertou ${acertos} respostas e errou ${erros} respostas`;
+      textoFormatado.innerHTML = `Resultado de todas questões (menos a questão 9): Você acertou ${acertos} respostas e errou ${erros} respostas`;
     }
     
     verificarCheckbox(anwser9,anwser9Cor)
+  
     if (acertosCheckbox>0 || errosCheckbox>0){
-      if(acertosCheckbox< 5 && errosCheckbox == 0){
+      if(acertosCheckbox == 5 && errosCheckbox == 0){
         errosCheckbox += 5 - acertosCheckbox
         acertosCheckbox += 2
         textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação ao checkbox da questão 9: ${acertosCheckbox} respostas e errou ${errosCheckbox} respostas`
+        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
       }
       if(acertosCheckbox< 5 && errosCheckbox == 1){
         errosCheckbox += 5 - acertosCheckbox
         acertosCheckbox += 1
         textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação ao checkbox da questão 9: ${acertosCheckbox} respostas e errou ${errosCheckbox} respostas`
+        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
       }
       if(acertosCheckbox< 5 && errosCheckbox == 2){
         errosCheckbox += 5 - acertosCheckbox
         acertosCheckbox += 0
         textoFormatadoCheckbox.style.display = 'block';
-        textoFormatadoCheckbox.innerHTML = `Você acertou em relação ao checkbox da questão 9: ${acertosCheckbox} respostas e errou ${errosCheckbox} respostas`
+        textoFormatadoCheckbox.innerHTML = `Você acertou em relação à questão 9: ${acertosCheckbox} alternativas e errou ${errosCheckbox} alternativas`
       }
+      
     }
     
     acertos = 0
