@@ -38,6 +38,7 @@ const botaoEnviar = document.querySelector('.btn__submit')
 const textoFormatado = document.getElementById('mensagemResultado')
 const textoFormatadoCheckbox = document.getElementById('mensagemCheckboxResultado')
 const opcaoSelecionada = verificarSelecionado(anwser1);
+const botaoReset = document.querySelector('#reset');
 console.log(anwser9Cor)
 
 let acertosCheckbox = 0
@@ -143,6 +144,23 @@ document.querySelector('#verificar').addEventListener('click', () => {
     acertosCheckbox = 0
     errosCheckbox = 0
 });
+
+function resetarQuiz() {
+  document.querySelectorAll('input[type="radio"]').forEach(input => {
+    input.checked = false;
+  });
+  document.querySelectorAll('input[type="checkbox"]').forEach(input => {
+    input.checked = false;
+  });
+
+  document.querySelectorAll('.quiz__perguntas__alternativa__opcao__titulo').forEach(titulo => {
+    titulo.classList.add('normal'); 
+  });
+  textoFormatado.style.display = 'none';
+  textoFormatadoCheckbox.style.display = 'none';
+}
+
+botaoReset.addEventListener('click', resetarQuiz);
 
 
 
