@@ -2,14 +2,16 @@
 @use '../abstracts/mixins';
 
 .cabecalho {
-    height: 16%;
+    height: 16vh;
+    z-index: 101;
     width: 100%;
     top: 0;
     position: fixed;
     background-color: variaveis.$preto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     padding: 1rem 0 ;
     .curiosidades__menu{
         display: block;
@@ -25,6 +27,9 @@
             }
     }
     .cabecalho__logo{
+        display: flex;
+        flex-wrap: nowrap;
+        padding-right: 2rem;
         display: flex;
         column-gap: 1rem;
         align-items: center;
@@ -52,28 +57,71 @@
             align-items: center;
             column-gap: 1rem;
             li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 .cabecalho__navegacao__categorias__nome{
                     @include mixins.ff-fs-cl(variaveis.$fonte-Irish-Grover,1.5rem,variaveis.$branco);
                     text-decoration: none;
+                    display: none;
                     padding: 1rem;
                     margin-right: 2rem;
+                    background-color: variaveis.$preto;
+                    width: 12rem;
                     text-shadow: 2px 2px 2px variaveis.$preto;
                     &:hover{
                         color: variaveis.$cor-primaria;
                         transition: 0.8s;
-                        background-color: variaveis.$branco;
                         border-radius: 4px;
+                        margin-right: -2rem;
+                        background-color: variaveis.$cinza;
+                        width: 12rem;
                     }
+                    
                 }
             }    
         }
         .mobile-menu-icon{
-            display: none;
+            display: block;
+            padding-right: 6.5rem;
+            padding-left: -6.3rem;
+            button{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                img {
+                    width: 3rem;
+                }
+            }
             position: relative;
         }
         .mobile-menu{
             display: none;
+            .cabecalho__navegacao__categorias {
+                top: 16vh;
+                left: 0;
+                position: fixed;
+                z-index: 201;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 1rem;
+                .cabecalho__navegacao__categorias__nome{
+                    display: block;
+                    padding-top: 1.2rem;
+                }
+            }
             
+        }
+    }
+    &.open{
+        .mobile-menu {
+            z-index: 200;
+            position: fixed;
+            display: block;
+            max-height: 40rem; // Ajuste conforme necessário
+            opacity: 1;
+            transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
         }
     }
     .cabecalho__navegacao__pesquisar{
@@ -110,77 +158,6 @@
             }
         }
     
-}
-    }
-
-@media screen and (max-width:2000px){
-    .cabecalho__navegacao__categorias__nome{
-        display: none;
-    } 
-
-    .cabecalho{
-        justify-content: space-between;
-        height: 14%;
-        flex-direction: row-reverse;
-        .cabecalho__logo{
-            display: flex;
-            flex-wrap: nowrap;
-            padding-right: 2rem;
-        }
-        &.open{
-            .mobile-menu {
-                display: block;
-                max-height: 40rem; // Ajuste conforme necessário
-                opacity: 1;
-                transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-            }
-        }
-        .cabecalho__navegacao{
-            .cabecalho__navegacao__categorias{
-                li {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    .cabecalho__navegacao__categorias__nome{
-                        background-color: variaveis.$preto;
-                        width: 12rem;
-                        &:hover{
-                            margin-right: -2rem;
-                            background-color: variaveis.$cinza;
-                            width: 12rem;
-                        }
-                    }
-                }
-            }
-            
-            .mobile-menu-icon{
-                display: block;
-                padding-right: 6.5rem;
-                padding-left: -6.3rem;
-                button{
-                    background-color: transparent;
-                    border: none;
-                    cursor: pointer;
-                    img {
-                        width: 3rem;
-                    }
-                }
-            }
-            .mobile-menu {
-                .cabecalho__navegacao__categorias {
-                    top: 14%;
-                    left: 0;
-                    position: fixed;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    padding-bottom: 1rem;
-                    .cabecalho__navegacao__categorias__nome{
-                        display: block;
-                        padding-top: 1.2rem;
-                    }
-                }
-            }
-        }
     }
 }
+
