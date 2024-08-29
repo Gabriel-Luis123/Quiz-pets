@@ -90,7 +90,9 @@ function verificarCheckbox(resposta) {
               label_id = selecionado.id + "_label"
               const labelElemente = document.getElementById(label_id)
               labelElemente.classList.remove('normal')
+              
               errosCheckbox++
+              console.log(errosCheckbox)
             }
         }
     }
@@ -153,11 +155,15 @@ document.querySelector('#verificar').addEventListener('click', () => {
   
     if (acertosCheckbox > 0 || errosCheckbox > 0) {
       if (acertosCheckbox < 5) {
+          console.log("acertos", acertosCheckbox)
+          console.log("erros",errosCheckbox)
           errosCheckbox += 5 - acertosCheckbox;
           if (errosCheckbox == 0) {
               acertosCheckbox += 2;
           } else if (errosCheckbox == 1) {
               acertosCheckbox += 1;
+          } else if(errosCheckbox == 3) {
+            acertosCheckbox +=1
           }
       } else if (acertosCheckbox == 5 && errosCheckbox == 1) {
           acertosCheckbox++;
